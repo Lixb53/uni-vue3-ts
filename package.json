@@ -29,7 +29,8 @@
     "build:mp-weixin": "uni build -p mp-weixin",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
-    "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
+    "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3040820220424001",
@@ -58,10 +59,12 @@
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
     "autoprefixer": "^10.4.5",
+    "conventional-changelog-cli": "^2.2.2",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.7.1",
+    "global": "^4.4.0",
     "postcss": "^8.1.0",
     "postcss-class-rename": "^1.0.1",
     "postcss-comment": "^2.0.0",
