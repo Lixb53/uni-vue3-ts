@@ -17,6 +17,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
   const isBuild = command === 'build';
 
   return {
+    base: '/',
     root,
     resolve: {
       alias: [

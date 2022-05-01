@@ -65,7 +65,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.7.1",
     "global": "^4.4.0",
-    "postcss": "^8.1.0",
+    "postcss": "^8.4.13",
     "postcss-class-rename": "^1.0.1",
     "postcss-comment": "^2.0.0",
     "postcss-html": "^1.0.0",
@@ -79,11 +79,9 @@
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-order": "^5.0.0",
-    "tailwindcss": "^3.0.24",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3",
     "vite": "^2.9.6",
-    "vite-plugin-windicss": "^1.8.4",
     "vue-eslint-parser": "^8.3.0"
   }
 }
