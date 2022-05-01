@@ -1,28 +1,20 @@
 <template>
-  <view class="content bg-orange-700 dark:bg-black">
+  <view class="content">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
-      <text class="title text-red-500">{{ title }}</text>
       <text class="title">{{ title }}</text>
-    </view>
-    <view>
-      <button @click="changeColor">changeColor</button>
+      <text class="title">{{ title }}</text>
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
   import { ref } from 'vue';
+  import { useAppStore } from '/@/store/modules/app';
+
+  console.log(useAppStore());
+
   const title = ref('Hello');
-  const theme = ref<boolean>(false);
-  const changeColor = () => {
-    if (!theme.value) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    theme.value = !theme.value;
-  };
 </script>
 
 <style lang="scss">

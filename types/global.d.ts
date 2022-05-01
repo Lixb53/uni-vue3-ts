@@ -14,5 +14,3 @@ declare interface ViteEnv {
   VITE_USE_IMAGEMIN: boolean;
   VITE_GENERATE_UI: string;
 }
-
-declare type Recordable<T = any> = Record<string, T>;
