@@ -3,16 +3,13 @@
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title text-red">{{ title }}</text>
-      <text class="title">{{ title }}</text>
+      <text class="title text-blue">{{ title }}</text>
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
   import { ref } from 'vue';
-  import { useAppStore } from '/@/store/modules/app';
-
-  console.log(useAppStore());
 
   const title = ref('Hello');
 </script>

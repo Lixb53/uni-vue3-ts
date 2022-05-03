@@ -8,7 +8,7 @@ console.log(path,'posto');
 module.exports = {
   parser: require('postcss-comment'),
   plugins: [
-    // uniPostcssPlugin(),
+    uniPostcssPlugin(),
     require('postcss-import')({
       resolve(id, basedir, importOptions) {
         console.log(id,'postcss-config')

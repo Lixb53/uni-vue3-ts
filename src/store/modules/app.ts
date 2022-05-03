@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { store } from '/@/store';
 
-import { darkMode } from '/@/setting/projectSetting';
+import { darkMode } from '/@/settings/projectSetting';
 import { ThemeEnum } from '/@/enums/appEnum';
 
 interface AppState {
