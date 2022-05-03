@@ -32,7 +32,11 @@ const transform: AxiosTransform = {
 
     const { isTransformResponse, isReturnNativeResponse } = options;
 
-    console.log('处理请求数据如果数据不是预期格式，可直接抛出错误', isTransformResponse, isReturnNativeResponse);
+    console.log(
+      '处理请求数据如果数据不是预期格式，可直接抛出错误',
+      isTransformResponse,
+      isReturnNativeResponse
+    );
 
     // 是否返回原生响应头 比如：需要获取响应头时使用该属性
     if (isReturnNativeResponse) {
@@ -81,7 +85,7 @@ const transform: AxiosTransform = {
       uni.showModal({
         title: axiosTip.errorTip,
         content: timeoutMsg,
-        showCancel: false
+        showCancel: false,
       });
     } else if (options.errorMessageMode === 'message') {
       // #ifdef APP-PLUS
@@ -89,8 +93,8 @@ const transform: AxiosTransform = {
       // #endif
       uni.showToast({
         title: timeoutMsg,
-        duration: 2000
-      })
+        duration: 2000,
+      });
     }
 
     throw new Error(axiosTip.apiRequestFailed);
@@ -135,7 +139,7 @@ const transform: AxiosTransform = {
         if (joinParamsToUrl) {
           config.url = setObjToUrlParams(
             config.url as string,
-            Object.assign({}, config.params, config.data),
+            Object.assign({}, config.params, config.data)
           );
         }
       } else {
@@ -196,7 +200,7 @@ const transform: AxiosTransform = {
           uni.showModal({
             title: axiosTip.errorTip,
             content: errMessage,
-            showCancel: false
+            showCancel: false,
           });
         } else if (errorMessageMode === 'message') {
           // #ifdef APP-PLUS
@@ -204,8 +208,8 @@ const transform: AxiosTransform = {
           // #endif
           uni.showToast({
             title: errMessage,
-            duration: 2000
-          })
+            duration: 2000,
+          });
         }
         return Promise.reject(error);
       }
@@ -274,17 +278,15 @@ function createAxios(opt?: Partial<CreateAxiosOptions>) {
           },
         },
       },
-      opt || {},
-    ),
+      opt || {}
+    )
   );
 }
-export const defHttp = createAxios(
-  {
-    // #ifdef APP-PLUS
-    adapter: axiosAdapterUniapp,
-    requestOptions: {
-      apiUrl: 'http://192.168.31.218:8091/',
-    }
-    // #endif
-  }
-);
+export const defHttp = createAxios({
+  // #ifndef H5
+  adapter: axiosAdapterUniapp,
+  requestOptions: {
+    apiUrl: 'http://192.168.31.218:8091/',
+  },
+  // #endif
+});
